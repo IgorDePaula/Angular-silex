@@ -1,7 +1,15 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-
+angular.module('App',['ngRoute','ngResource'])
+        .config(['$routeProvider',function($routeProvider){
+  $routeProvider.
+      when('/home', {
+        templateUrl: 'app/partials/home.html',
+        controller: 'HomeCtrl'
+      }).
+      when('/phones/:phoneId', {
+        templateUrl: 'partials/phone-detail.html',
+        controller: 'PhoneDetailCtrl'
+      }).
+      otherwise({
+        redirectTo: '/home'
+      });                
+}]);
