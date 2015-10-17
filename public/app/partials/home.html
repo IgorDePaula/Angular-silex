@@ -16,7 +16,10 @@
                         <td>{{user.id}}</td>
                         <td>{{user.nome}}</td>
                         <td>{{user.email}}</td>
-                        <td>{{user.ativo}}</td>
+                        <td>
+                        <span ng-if='user.ativo == 1' class="label label-success" role="alert">ATIVO</span>
+                        <span ng-if='user.ativo == 0' class="label label-danger" role="alert">INATVO</span>
+                        </td>
                         <td></td>
                     </tr>
                 </tbody>

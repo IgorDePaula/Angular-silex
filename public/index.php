@@ -1,6 +1,7 @@
 <?php
 
 require '../vendor/autoload.php';
+
 use Silex\Application;
 
 $doctrine = require('../middlewares/doctrine.php');
