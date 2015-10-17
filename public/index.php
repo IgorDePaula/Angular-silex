@@ -3,28 +3,16 @@
 require '../vendor/autoload.php';
 use Silex\Application;
 
+$doctrine = require('../middlewares/doctrine.php');
+
+$page = require('../middlewares/page.php');
+
 $app = new Application;
 
-$app->register(new Silex\Provider\DoctrineServiceProvider(), array(
-    'db.options' => array(
-        'driver' => 'mysqli',
-        'host' => 'localhost',
-        'dbname' => 'teste',
-        'user' => 'teste',
-        'password' => 'teste',
-        'port' => 3306,
-        'charset' => 'utf8_general_ci'
-    )
-        )
-);
+$doctrine($app);
 
-$app->get('/',function(){
-    return "Hello World!";
+$app->get('/',function() use($page){
+    return $page('../view/index.html');
 });
-$app->get('/users', function(){
-   return 'users';
-});
-$app->get('/users/{id}', function($id){
-   return $id;
-});
+
 $app->run();
