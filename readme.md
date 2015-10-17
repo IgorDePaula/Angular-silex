@@ -3,6 +3,8 @@ Angular Silex
 
 A basic example of [angular.js](http://www.angularjs.org) with [Silex](http://silex.sensiolabs.org/) and [Docrine](http://www.doctrine-project.org/).
 
+Install the app with [Composer](http://getcomposer.org) and [Bower](http://www.bower.io)
+
 Table for test:
 ```
    CREATE TABLE `users` (
