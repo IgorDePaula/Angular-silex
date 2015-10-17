@@ -7,12 +7,16 @@ $doctrine = require('../middlewares/doctrine.php');
 
 $page = require('../middlewares/page.php');
 
+$routes = require('../middlewares/routes.php');
+
+$config = require('../middlewares/config.php');
+
 $app = new Application;
 
 $doctrine($app);
 
-$app->get('/',function() use($page){
-    return $page('../view/index.html');
-});
+$config($app);
+
+$routes($app,$page);
 
 $app->run();
