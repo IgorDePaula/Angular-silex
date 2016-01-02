@@ -1,3 +1,3 @@
 #!/bin/bash
 cd /var/www/html
-service httpd start
+service apache2 start
