@@ -5,10 +5,10 @@ files:
     destination: /var/www/html
 hooks:
   BeforeInstall:
-    - location: dependencies/install
+    - location: dependencies/install.sh
       timeout: 300
       runas: root
   AfterInstall:
-    - location: dependencies/after    
+    - location: dependencies/after.sh
       timeout: 300
       runas: root
