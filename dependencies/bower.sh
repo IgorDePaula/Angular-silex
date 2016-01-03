@@ -2,5 +2,5 @@
 cd /var/www
 sudo chmod -R 777 /var/www/public/
 sudo bower install --allow-root
-rm -Rf ./html
-mv public html
+sudo rm -Rf ./html
+sudo mv public html
