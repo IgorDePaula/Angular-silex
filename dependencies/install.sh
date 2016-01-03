@@ -5,5 +5,6 @@ apt-get install build-essential libssl-dev -y
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 curl -sL https://deb.nodesource.com/setup_4.x | bash -
-sudo apt-get install -y nodejs
+apt-get install -y nodejs
+chmod -R 777 /var/www/public
 npm install -g bower
