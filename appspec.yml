@@ -9,9 +9,6 @@ hooks:
       timeout: 300
       runas: root
   AfterInstall:
-    - location: dependencies/after.sh
-      timeout: 300
-      runas: root
     - location: dependencies/bower.sh
       timeout: 300
       runas: ubuntu
