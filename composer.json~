@@ -1,11 +1,4 @@
-{"autoload" : {
-		"psr-4" : {
-			"PJenkins\\" : "src/PJenkins"
-		}
-	},
-	"license": "MIT",
-	"name" : "igordepaula/projetojenkins",
-	"description" : "Projeto de teste para o jenkins",
+{
     "require": {
         "silex/silex": "dev-master",
         "doctrine/dbal": "~2.2"
